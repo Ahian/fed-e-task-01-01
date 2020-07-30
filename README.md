@@ -26,7 +26,7 @@ D. 使用 patch(oldVnode, null) 可以清空页面元素
 过程：
 1. 触发prepatch钩子函数
 2. 触发update钩子函数
-3. 新节点有text 属性，且不等于旧节点的text 属性。如果老节点有children就移除，然后设置新节点对应的DOM 元素的textContent
+3. 新节点有text 属性，且不等于旧节点的text 属性。1. 如果老节点有children就移除，2. 设置新节点对应的DOM 元素的textContent
 4. 新老节点都有children ，且不等，1. 调用updateChildren() 2. 对比子节点，更新子节点差异
 5. 只有新节点有children 1.如果老节点有text 属性，清空对应DOM 的textContent 2. 添加所有子节点
 6. 只有老节点有children，移除老节点。
